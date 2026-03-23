@@ -1,0 +1,376 @@
+                /* ***HEADER*** */
+
+/* the background color from the header = black */
+header{
+    background-color: black;
+}
+
+/* the logo placement / height in the header */
+header img{
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+                /* ***BODY *** */
+
+/* make selecting things impossible */
+
+body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* defines width of scrollbar */
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+/* style the box the scrollthingy will be in */
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* styles the scrollthingy */
+::-webkit-scrollbar-thumb{
+    background-color: darkred;
+    border-radius: 10px;
+}
+
+/* styles the scrollthingy on hover */
+::-webkit-scrollbar-thumb:hover{
+    background-color: goldenrod;
+}
+
+                /* ***MAIN*** */
+
+            /* --NAV-- */
+
+/* the box with the section info to show the section on click */
+
+/* give space between the nav blocks */
+
+main #countDown{
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    padding: 15vh 0 15vh 0;
+    font-size: 10vh;
+}
+
+
+main div{
+    margin: 1vh 0 0 0;
+}
+
+.districtBar:hover, #fillInRandomly, #clearFields, #submit, #backToLog, #advanceToNext, #seeTributes{
+    cursor: pointer;
+}
+
+#backToLog{
+    margin-bottom: 2vh;
+}
+
+/* the box with the section info to show the section on click */
+main .districtBar{
+    padding: 0.5vh 0 0.5vh 0;
+    background-color: white;
+    border: 2px solid goldenrod;
+    text-align: center;
+}
+
+/* the text from the box with the section info to show the section on click */
+main .districtBar p{
+    margin: 0; /* needed because of bootstrap */
+    font-weight: bold;
+    font-family: "EB Garamond";
+}
+
+/* the box to clear all the sections on click */
+main #clearFields{
+    padding: 0.5vh 0 0.5vh 0;
+    background-color: darkred;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* the text from the box to clear all the sections on click */
+main #clearFields p{
+    margin: 0; /* needed because of bootstrap */
+    font-family: "EB Garamond";
+    color: white;
+}
+
+main #fillInRandomly, #advanceToNext, #refresh{
+    padding: 0.5vh 0 0.5vh 0;
+    background-color: darkblue;
+    border: 2px solid black;
+    text-align: center;
+    color: white;
+}
+
+main #fillInRandomly p{
+    margin: 0;
+    font-family: "EB Garamond";
+    color: white;
+}
+
+/* the box to submit the info on click */
+main #submit, #seeTributes, #backToLog{
+    padding: 0.5vh 0 0.5vh 0;
+    background-color: darkgreen;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#advanceToNext{
+    margin-top: 2vh;
+}
+
+#seeTributes, #backToLog, #advanceToNext{
+    text-align: center;
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* the text from the box to submit the info on click */
+main #submit p, #backToLog p, #advanceToNextp{
+    margin: 0; /* needed because of bootstrap */
+    font-family: "EB Garamond";
+    color: white;
+}
+
+            /* --SECTION .DISCTRICT-- */
+
+/* styling the district itself with a background and a padding-bottom */
+.district{
+    background-image: url("../media/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 7%;
+}
+
+/* aligning the text from a district in the center | :not(img) seems to be needed */
+.district :not(img){
+    text-align: center;
+}
+
+/* styling the logo from the district */
+main .district .districtLogo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    height: 40%;
+}
+
+        /* -TITLE AND INFO- */
+
+/* the district name and info inside the district */
+main .district h1, h2{
+    font-family: 'Bungee Inline', cursive;
+    color: white;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+/* scaling the subtitle from the district info */
+main .district h2{
+    font-size: 125%;
+}
+
+        /* -FORM- */
+
+/* the black box around the tribute form */
+main .tribute .insideForm{
+    border: 2px solid black;
+}
+
+/* styling the input field for the name */
+main .tribute .tributeInfo .name{
+    background-color: transparent;
+    margin-bottom: 2vh;
+    border-color: transparent;
+    border-bottom-color: black;
+    color: white;
+    font-family: 'EB Garamond', serif;
+}
+
+/* the lay-out from the input fields in the tribute form */
+main .tribute .tributeInfo .stat{
+    margin: 0 0 1vh 0;
+    background-color: rgb(70, 11, 11);
+    color: white;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* the placeholder for the input fields in the tribute form */
+main .tribute .tributeInfo input::placeholder{
+    color: lightgray;
+}
+
+/* no arrows on select in input in tribute form */
+main .tribute .tributeInfo input[type=number]::-webkit-inner-spin-button{
+    background-color: transparent;
+}
+
+/* no blue glow box on select in input in tribute form */
+main .tribute input{
+    outline: 0;
+}
+
+                /* ***FOOTER*** **/
+
+/*
+footer{
+    background-color: gray;
+    width: 100%;
+}
+
+@media only screen and (min-width: 646px) {
+    /* styles the footer *\
+    footer {
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 25vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Stick content to bottom *\
+        align-items: center;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 0.2rem 0; /* Adjust spacing above images *\
+    }
+
+    footer img {
+        margin: 0 7vw;
+        height: 70%;
+    }
+
+
+    #bottomTributes{
+        align-items: flex-end;
+        margin-bottom: 3vh;
+        bottom: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #bottomTributes p{
+        margin-bottom: 15vh;
+    }
+}
+
+@media only screen and (max-width: 645px){
+    #bottomTributes{
+        bottom: 0;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        background-color: gray;
+        padding-top: 5vh;
+    }
+
+    .bottomTributeImg{
+        width: 20%;
+        height: 20%;;
+     }
+}
+*/
+
+
+.log {
+    margin: 4vh 0 4vh 0;
+    padding: 2vh 2vw 2vh 2vw;
+    border: 2px solid black;
+    list-style-type: none;
+    text-align: center;
+}
+
+.log li{
+    list-style-type: none;
+    text-align: center;
+    margin: 1vh 0 1vh 0;
+}
+
+.tributeInfo div p{
+    color: white;
+}
+
+#eventLog{
+    padding: 0;
+}
+
+.statLeft{
+    margin-right: 1vw;
+}
+
+.statsDiv{
+    margin: auto;
+    max-width: 70%;
+}
+
+.deadTribute{
+  filter: drop-shadow(0 0 4px black);
+}
+
+.announcement{
+    background-color: darkGray;
+}
+
+.gold{
+    background-color: goldenrod;
+    border: 2px solid black;
+}
+
+.finish, #submit{
+    margin-bottom: 3vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 100%;
+}
+
+#tributeFormContainer{
+    max-width: 95%;
+    margin: 2vh auto 0 auto;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.showFlex{
+    display: flex !important;
+}
+
+.deadDistrict{
+    background-color: darkred !important;
+    color: white;
+}
+
+.halfDeadDistrict {
+    background-color: darkorange !important;
+    color: white;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.noWinner{
+    background-color: darkred;
+}
